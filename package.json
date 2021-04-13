@@ -1,0 +1,20 @@
+{
+  "name": "eray-hoca",
+  "version": "1.0.0",
+  "description": "Eray Hoca, özel matematik öğretmeni, Landing Page",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel serve ./src/index.html",
+    "build": "parcel build ./src/index.html"
+  },
+  "browserslist": "> 0.2%",
+  "author": "Erhan Akyel",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "2.0.0-beta.2",
+    "parcel": "^2.0.0-beta.2"
+  },
+  "dependencies": {
+    "normalize.css": "^8.0.1"
+  }
+}
