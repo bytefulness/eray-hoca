@@ -4,17 +4,21 @@
   "description": "Eray Hoca, özel matematik öğretmeni, Landing Page",
   "main": "index.js",
   "scripts": {
-    "start": "parcel serve ./src/index.html",
-    "build": "parcel build ./src/index.html"
+    "start": "parcel src/index.html",
+    "build": "parcel build src/index.html"
   },
-  "browserslist": "> 0.2%",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/eakyel/eray-hoca.git"
+  },
   "author": "Erhan Akyel",
   "license": "ISC",
-  "devDependencies": {
-    "@parcel/transformer-sass": "2.0.0-beta.2",
-    "parcel": "^2.0.0-beta.2"
+  "bugs": {
+    "url": "https://github.com/eakyel/eray-hoca/issues"
   },
-  "dependencies": {
-    "normalize.css": "^8.0.1"
+  "homepage": "https://github.com/eakyel/eray-hoca#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.32.8"
   }
 }
