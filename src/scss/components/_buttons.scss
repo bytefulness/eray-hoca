@@ -1,0 +1,27 @@
+.button {
+  color: #fff;
+  font-weight: regular;
+  background: $primary-color;
+  padding: pxToRem(16);
+  width: pxToRem(200);
+  border-radius: $border-radius;
+  transition: background-color 0.25s ease-in-out, box-shadow 0.2s ease-in-out;
+  cursor: pointer;
+  border: none;
+  outline: none;
+
+  &:hover {
+    background-color: #0558df;
+  }
+}
+
+.button--secondary {
+  @extend .button;
+  color: $primary-color;
+  background-color: $secondary-color;
+
+  &:hover {
+    background-color: $secondary-color;
+    box-shadow: 0 0 0 1px $primary-color;
+  }
+}
