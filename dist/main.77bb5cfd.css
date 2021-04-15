@@ -35,7 +35,7 @@ main {
    */
 h1 {
   font-size: 2em;
-  margin: 0.67em 0;
+  margin: 0;
 }
 
 /* Grouping content
@@ -339,6 +339,7 @@ template {
 }
 
 html {
+  font-size: 100%;
   box-sizing: border-box;
 }
 
@@ -346,14 +347,18 @@ html {
 *,
 *::after {
   box-sizing: inherit;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 body {
   font-family: "Noto Sans", sans-serif;
-  font-size: 16px;
-  background-color: #fff;
+  font-size: 1rem;
+}
+
+img {
+  width: 100%;
+  height: auto;
 }
 
 a {
@@ -361,7 +366,85 @@ a {
 }
 a:hover {
   cursor: pointer;
-  text-decoration: chocolate;
+  text-decoration: #069e9e;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.button, .button--secondary {
+  color: #fff;
+  font-weight: regular;
+  background: #0164fe;
+  padding: 1rem;
+  width: 12.5rem;
+  border-radius: 1.5rem;
+  transition: background-color 0.25s ease-in-out, box-shadow 0.2s ease-in-out;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+.button:hover, .button--secondary:hover {
+  background-color: #0558df;
+}
+
+.button--secondary {
+  color: #0164fe;
+  background-color: #c3e3ff;
+}
+.button--secondary:hover {
+  background-color: #c3e3ff;
+  box-shadow: 0 0 0 1px #0164fe;
+}
+
+.showcase {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 31.25rem;
+  padding: 4rem 4rem;
+  background: #ecf6ff;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+.showcase__title {
+  font-size: 2.5rem;
+  line-height: auto;
+  letter-spacing: -1px;
+}
+.showcase__title .highlight {
+  color: #0164fe;
+}
+.showcase__expression {
+  margin-top: 1.5rem;
+}
+.showcase__cta {
+  margin-top: 3rem;
+}
+.showcase__cta .showcase__btn-container {
+  margin-top: 1rem;
+}
+.showcase__form .showcase__message {
+  color: grey;
+  width: 50%;
+  height: 3.125rem;
+  padding: 0.75rem;
+  border: 1px solid #c5e3ff;
+  border-radius: 0.75rem;
+  transition: all 0.25s ease-out;
+}
+.showcase__form .showcase__message:focus {
+  color: #000;
+  outline: none;
+  box-shadow: 0 0 0 1px #0164fe;
+  height: 12.5rem;
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */

@@ -1,0 +1,54 @@
+.showcase {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: pxToRem(500);
+  padding: pxToRem(64) pxToRem(64);
+  background: $neutral;
+  border-radius: $border-radius;
+  overflow: hidden;
+
+  &__title {
+    font-size: pxToRem(40);
+    line-height: auto;
+    letter-spacing: -1px;
+
+    .highlight {
+      color: $primary-color;
+    }
+  }
+
+  &__expression {
+    margin-top: pxToRem(24);
+  }
+
+  &__cta {
+    margin-top: pxToRem(48);
+
+    .showcase__btn-container {
+      margin-top: pxToRem(16);
+    }
+  }
+
+  &__form {
+    .showcase__message {
+      // text-align: center;
+      color: grey;
+      width: 50%;
+      height: pxToRem(50);
+      padding: pxToRem(12);
+      border: 1px solid $input-border;
+      border-radius: pxToRem(12);
+      transition: all 0.25s ease-out;
+
+      &:focus {
+        // border: none;
+        color: #000;
+        outline: none;
+        box-shadow: 0 0 0 1px $primary-color;
+        height: pxToRem(200);
+      }
+    }
+  }
+}
