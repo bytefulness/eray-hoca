@@ -3,16 +3,22 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  height: pxToRem(500);
-  padding: pxToRem(64) pxToRem(64);
+  padding: pxToRem(64) pxToRem(24);
   background: $neutral;
   border-radius: $border-radius;
   overflow: hidden;
 
   &__title {
-    font-size: pxToRem(40);
-    line-height: auto;
+    font-size: pxToRem(30);
+    line-height: 1.3em;
     letter-spacing: -1px;
+
+    @include breakpoint-up("for-tablet-landscape-up") {
+      & {
+        padding: pxToRem(64) pxToRem(64);
+        font-size: pxToRem(40);
+      }
+    }
 
     .highlight {
       color: $primary-color;
@@ -24,23 +30,41 @@
   }
 
   &__cta {
-    margin-top: pxToRem(48);
+    margin-top: pxToRem(24);
+
+    @include breakpoint-up("for-tablet-portrait-up") {
+      & {
+        margin-top: pxToRem(48);
+      }
+    }
 
     .showcase__btn-container {
       margin-top: pxToRem(16);
+      display: flex;
+
+      @include breakpoint-up("for-tablet-portrait-up") {
+        & {
+          display: block;
+        }
+      }
     }
   }
 
   &__form {
     .showcase__message {
-      // text-align: center;
       color: grey;
-      width: 50%;
+      width: 100%;
       height: pxToRem(50);
       padding: pxToRem(12);
       border: 1px solid $input-border;
       border-radius: pxToRem(12);
       transition: all 0.25s ease-out;
+
+      @include breakpoint-up("for-tablet-portrait-up") {
+        & {
+          width: 50%;
+        }
+      }
 
       &:focus {
         // border: none;

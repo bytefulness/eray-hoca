@@ -408,16 +408,21 @@ ul {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  height: 31.25rem;
-  padding: 4rem 4rem;
+  padding: 4rem 1.5rem;
   background: #ecf6ff;
   border-radius: 1.5rem;
   overflow: hidden;
 }
 .showcase__title {
-  font-size: 2.5rem;
-  line-height: auto;
+  font-size: 1.875rem;
+  line-height: 1.3em;
   letter-spacing: -1px;
+}
+@media (min-width: 56.25em) {
+  .showcase__title {
+    padding: 4rem 4rem;
+    font-size: 2.5rem;
+  }
 }
 .showcase__title .highlight {
   color: #0164fe;
@@ -426,19 +431,35 @@ ul {
   margin-top: 1.5rem;
 }
 .showcase__cta {
-  margin-top: 3rem;
+  margin-top: 1.5rem;
+}
+@media (min-width: 37.5em) {
+  .showcase__cta {
+    margin-top: 3rem;
+  }
 }
 .showcase__cta .showcase__btn-container {
   margin-top: 1rem;
+  display: flex;
+}
+@media (min-width: 37.5em) {
+  .showcase__cta .showcase__btn-container {
+    display: block;
+  }
 }
 .showcase__form .showcase__message {
   color: grey;
-  width: 50%;
+  width: 100%;
   height: 3.125rem;
   padding: 0.75rem;
   border: 1px solid #c5e3ff;
   border-radius: 0.75rem;
   transition: all 0.25s ease-out;
+}
+@media (min-width: 37.5em) {
+  .showcase__form .showcase__message {
+    width: 50%;
+  }
 }
 .showcase__form .showcase__message:focus {
   color: #000;
