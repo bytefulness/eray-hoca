@@ -1,0 +1,24 @@
+.card {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  padding: pxToRem(36);
+  border-radius: $border-radius;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+
+  @include breakpoint-up("for-tablet-landscape-up") {
+    & {
+      padding: pxToRem(20) pxToRem(36);
+    }
+  }
+
+  &__image {
+    width: pxToRem(80);
+  }
+
+  &__title {
+    font-size: pxToRem(16);
+    font-weight: 500;
+    line-height: 1.4em;
+    margin-top: pxToRem(16);
+  }
+}
