@@ -18,7 +18,7 @@
     <main>
       <section class="showcase container">
         <h1 class="showcase__title">
-          Heyecan duyulmayan işler başarılamaz.</br>
+          Heyecan duyulmayan işler başarılamaz.<br />
           <span class="highlight">Matematik</span> bir heyecan işidir.
         </h1>
         <p class="showcase__expression">
@@ -29,8 +29,7 @@
           <form class="showcase__form">
             <label for="message">
               <textarea
-              class='showcase__message'
-                type="text"
+                class="showcase__message"
                 name="message"
                 id="message"
                 placeholder="Eray Hoca'ya mesajın"
@@ -67,7 +66,7 @@
               >İstanbul Üniversitesi Doktora, Matematik Ana Bilim Dalı</span
             >
           </div>
-  
+
           <div class="biography__item">
             <img
               src="./images/bogazici-universitesi.png"
@@ -79,6 +78,121 @@
               >Boğaziçi Üniversitesi Yüksek Lisans, Matematik Ana Bilim Dalı,
               2012</span
             >
+          </div>
+        </div>
+      </section>
+
+      <section class="lectures">
+        <div class="container">
+          <div class="tab-container">
+            <div class="tab__button-container">
+              <button
+                class="tab__button tab__button--active"
+                data-target="lise"
+              >
+                Lise
+              </button>
+              <button class="tab__button" data-target="üniversite">
+                Üniversite
+              </button>
+              <button class="tab__button" data-target="sinava-hazirlik">
+                Sınava Hazırlık
+              </button>
+              <button
+                class="tab__button"
+                data-target="matematik-egitim-koclugu"
+              >
+                Matematik Eğitim Koçluğu
+              </button>
+            </div>
+
+            <div class="tab__content">
+              <div class="tab__content--lise" data-board="lise">
+                <div class="card">
+                  <img
+                    src="./images/lectures/matematik.svg"
+                    alt="matematik"
+                    class="card__image"
+                  />
+                  <h3 class="card__title">Matematik</h3>
+                </div>
+
+                <div class="card">
+                  <img
+                    src="./images/lectures/geometri.svg"
+                    alt="geometri"
+                    class="card__image"
+                  />
+                  <h3 class="card__title">Geometri / Analitik Geo.</h3>
+                </div>
+
+                <div class="card">
+                  <img
+                    src="./images/lectures/fizik.svg"
+                    alt="fizik"
+                    class="card__image"
+                  />
+                  <h3 class="card__title">Fizik</h3>
+                </div>
+
+                <div class="card">
+                  <img
+                    src="./images/lectures/kimya.svg"
+                    alt="kimya"
+                    class="card__image"
+                  />
+                  <h3 class="card__title">Kimya</h3>
+                </div>
+              </div>
+
+              <div
+                class="tab__content--universite hidden"
+                data-board="universite"
+              >
+                <div class="card">
+                  <img
+                    src="./images/lectures/matematik.svg"
+                    alt="matematik"
+                    class="card__image"
+                  />
+                  <h3 class="card__title">Bilgisayar Mühendisliği Matematik</h3>
+                </div>
+              </div>
+
+              <div
+                class="tab__content--sinava-hazirlik hidden"
+                data-board="sinava-hazirlik"
+              >
+                <div class="card">
+                  <h3 class="card__title">YKS</h3>
+                </div>
+
+                <div class="card">
+                  <h3 class="card__title">TYT</h3>
+                </div>
+
+                <div class="card">
+                  <h3 class="card__title">AYT</h3>
+                </div>
+
+                <div class="card">
+                  <h3 class="card__title">KPSS</h3>
+                </div>
+
+                <div class="card">
+                  <h3 class="card__title">DGS</h3>
+                </div>
+
+                <div class="card">
+                  <h3 class="card__title">ALES</h3>
+                </div>
+              </div>
+
+              <div class="tab__content--kocluk hidden" data-board="kocluk">
+                <p>Matematik eğitim koçluğu için iletişime geç</p>
+                <a href="#" class="button">İletişime Geç</a>
+              </div>
+            </div>
           </div>
         </div>
       </section>
