@@ -1,10 +1,26 @@
+%section {
+  padding: pxToRem(64) pxToRem(24);
+}
+
+%content-modifier {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: pxToRem(16);
+
+  @include breakpoint-up("for-tablet-landscape-up") {
+    & {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
 // * SHOWCASE
 .showcase {
+  @extend %section;
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  padding: pxToRem(64) pxToRem(24);
   background: $neutral;
   border-radius: $border-radius;
   overflow: hidden;
@@ -146,6 +162,86 @@
         & {
           width: pxToRem(120);
         }
+      }
+    }
+  }
+}
+
+// * LECTURES
+.lectures {
+  @extend %section;
+
+  .container {
+    @include breakpoint-up("for-tablet-landscape-up") {
+      & {
+        max-width: pxToRem(740);
+      }
+    }
+  }
+
+  .tab-container__wrapper {
+    max-width: 100%;
+    height: auto;
+    background-color: $neutral;
+    padding: pxToRem(12) pxToRem(24);
+    border-radius: $border-radius;
+    overflow-y: hidden;
+    overflow-x: scroll;
+  }
+
+  .tab__button-container {
+    display: flex;
+    white-space: nowrap;
+    background-color: $neutral;
+    border-radius: $border-radius;
+    overflow-y: auto;
+
+    .tab__button {
+      color: $primary-color;
+      background-color: transparent;
+      padding: pxToRem(12) pxToRem(16);
+      border: none;
+      outline: none;
+
+      &--active {
+        background-color: $primary-color;
+        color: #fff;
+        padding: pxToRem(8) pxToRem(24);
+        border-radius: $border-radius;
+      }
+    }
+  }
+
+  .tab__content {
+    margin-top: pxToRem(40);
+
+    &--lise {
+      @extend %content-modifier;
+    }
+
+    &--universite {
+      @extend %content-modifier;
+    }
+
+    &--sinava-hazirlik {
+      @extend %content-modifier;
+
+      .card {
+        padding: pxToRem(16);
+
+        .card__title {
+          margin-top: 0;
+        }
+      }
+    }
+
+    &--kocluk {
+      @extend %content-modifier;
+      display: block;
+      text-align: center;
+
+      .button {
+        margin-top: pxToRem(16);
       }
     }
   }

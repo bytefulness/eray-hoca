@@ -28,7 +28,7 @@
         <div class="showcase__cta">
           <form class="showcase__form">
             <label for="message">
-              <textarea class="showcase__message" type="text" name="message" id="message" placeholder="Eray Hoca'ya mesajın"></textarea>
+              <textarea class="showcase__message" name="message" id="message" placeholder="Eray Hoca'ya mesajın"></textarea>
             </label>
           </form>
           <div class="showcase__btn-container">
@@ -41,20 +41,103 @@
       <section class="biography">
         <div class="container">
           <div class="biography__item">
-            <img src="" alt="Massachusetts Institute of Technology sertifikalı" class="biography__item-image">
+            <img src="/mit.f8a8e28c.png" alt="Massachusetts Institute of Technology sertifikalı" class="biography__item-image">
             <span class="biography__item-text">Massachusetts Institute of Technology sertifikalı</span>
           </div>
 
           <div class="biography__item">
-            <img src="" alt="İstanbul Üniversitesi Doktora, Matematik Ana Bilim Dalı" class="biography__item-image">
+            <img src="/istanbul-universitesi.2e60bc34.png" alt="İstanbul Üniversitesi Doktora, Matematik Ana Bilim Dalı" class="biography__item-image">
             <span class="biography__item-text">İstanbul Üniversitesi Doktora, Matematik Ana Bilim Dalı</span>
           </div>
 
           <div class="biography__item">
-            <img src="" alt="Boğaziçi Üniversitesi
+            <img src="/bogazici-universitesi.65e2a072.png" alt="Boğaziçi Üniversitesi
             Yüksek Lisans, Matematik Ana Bilim Dalı, 2012" class="biography__item-image">
             <span class="biography__item-text">Boğaziçi Üniversitesi Yüksek Lisans, Matematik Ana Bilim Dalı,
               2012</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="lectures">
+        <div class="container">
+          <div class="tab-container">
+            <div class="tab__button-container">
+              <button class="tab__button tab__button--active" data-target="lise">
+                Lise
+              </button>
+              <button class="tab__button" data-target="üniversite">
+                Üniversite
+              </button>
+              <button class="tab__button" data-target="sinava-hazirlik">
+                Sınava Hazırlık
+              </button>
+              <button class="tab__button" data-target="matematik-egitim-koclugu">
+                Matematik Eğitim Koçluğu
+              </button>
+            </div>
+
+            <div class="tab__content">
+              <div class="tab__content--lise" data-board="lise">
+                <div class="card">
+                  <img src="/matematik.8c0eb3d9.svg" alt="matematik" class="card__image">
+                  <h3 class="card__title">Matematik</h3>
+                </div>
+
+                <div class="card">
+                  <img src="/geometri.477bd725.svg" alt="geometri" class="card__image">
+                  <h3 class="card__title">Geometri / Analitik Geo.</h3>
+                </div>
+
+                <div class="card">
+                  <img src="/fizik.baea4f2c.svg" alt="fizik" class="card__image">
+                  <h3 class="card__title">Fizik</h3>
+                </div>
+
+                <div class="card">
+                  <img src="/kimya.a26f14a9.svg" alt="kimya" class="card__image">
+                  <h3 class="card__title">Kimya</h3>
+                </div>
+              </div>
+
+              <div class="tab__content--universite hidden" data-board="universite">
+                <div class="card">
+                  <img src="/matematik.8c0eb3d9.svg" alt="matematik" class="card__image">
+                  <h3 class="card__title">Bilgisayar Mühendisliği Matematik</h3>
+                </div>
+              </div>
+
+              <div class="tab__content--sinava-hazirlik hidden" data-board="sinava-hazirlik">
+                <div class="card">
+                  <h3 class="card__title">YKS</h3>
+                </div>
+
+                <div class="card">
+                  <h3 class="card__title">TYT</h3>
+                </div>
+
+                <div class="card">
+                  <h3 class="card__title">AYT</h3>
+                </div>
+
+                <div class="card">
+                  <h3 class="card__title">KPSS</h3>
+                </div>
+
+                <div class="card">
+                  <h3 class="card__title">DGS</h3>
+                </div>
+
+                <div class="card">
+                  <h3 class="card__title">ALES</h3>
+                </div>
+              </div>
+
+              <div class="tab__content--kocluk hidden" data-board="kocluk">
+                <p>Matematik eğitim koçluğu için iletişime geç</p>
+                <a href="#" class="button">İletişime Geç</a>
+              </div>
+            </div>
           </div>
         </div>
       </section>

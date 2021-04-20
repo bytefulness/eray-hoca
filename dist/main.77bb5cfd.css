@@ -6,6 +6,7 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -374,11 +375,17 @@ ul {
 }
 
 .container {
-  max-width: 1100px;
+  max-width: 1280px;
   margin: 0 auto;
 }
 
+.hidden {
+  display: none !important;
+}
+
 .button, .button--secondary {
+  display: inline-block;
+  text-align: center;
   color: #fff;
   font-weight: regular;
   background: #0164fe;
@@ -403,24 +410,64 @@ ul {
   box-shadow: 0 0 0 1px #0164fe;
 }
 
+.card {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  padding: 2.25rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+}
+@media (min-width: 56.25em) {
+  .card {
+    padding: 1.25rem 2.25rem;
+  }
+}
+.card__image {
+  width: 5rem;
+}
+.card__title {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.4em;
+  margin-top: 1rem;
+}
+
+.lectures, .showcase {
+  padding: 4rem 1.5rem;
+}
+
+.lectures .tab__content--kocluk, .lectures .tab__content--sinava-hazirlik, .lectures .tab__content--universite, .lectures .tab__content--lise {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+@media (min-width: 56.25em) {
+  .lectures .tab__content--kocluk, .lectures .tab__content--sinava-hazirlik, .lectures .tab__content--universite, .lectures .tab__content--lise {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
 .showcase {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  padding: 4rem 1.5rem;
   background: #ecf6ff;
   border-radius: 1.5rem;
   overflow: hidden;
+}
+@media (min-width: 56.25em) {
+  .showcase {
+    padding: 8rem 8rem;
+  }
 }
 .showcase__title {
   font-size: 1.875rem;
   line-height: 1.3em;
   letter-spacing: -1px;
 }
-@media (min-width: 6.25em) {
+@media (min-width: 56.25em) {
   .showcase__title {
-    padding: 4rem 4rem;
     font-size: 2.5rem;
   }
 }
@@ -458,6 +505,11 @@ ul {
 }
 @media (min-width: 37.5em) {
   .showcase__form .showcase__message {
+    width: 70%;
+  }
+}
+@media (min-width: 56.25em) {
+  .showcase__form .showcase__message {
     width: 50%;
   }
 }
@@ -466,6 +518,108 @@ ul {
   outline: none;
   box-shadow: 0 0 0 1px #0164fe;
   height: 12.5rem;
+}
+
+.biography {
+  padding: 2.25rem;
+}
+@media (min-width: 56.25em) {
+  .biography {
+    margin-top: 2.75rem;
+  }
+}
+.biography .container {
+  display: flex;
+  align-items: center;
+}
+@media (min-width: 56.25em) {
+  .biography .container {
+    max-width: 46.25rem;
+  }
+}
+.biography__item {
+  text-align: center;
+}
+.biography__item:nth-of-type(2) {
+  transform: translateY(8px);
+}
+@media (min-width: 56.25em) {
+  .biography__item:nth-of-type(2) {
+    transform: translateY(0);
+  }
+}
+.biography__item:not(:last-of-type) {
+  margin-right: 1rem;
+}
+.biography__item-text {
+  display: block;
+  font-size: 0.8125rem;
+  line-height: 1.2em;
+  margin-top: 0.5rem;
+}
+@media (min-width: 56.25em) {
+  .biography__item-text {
+    line-height: 1.5em;
+  }
+}
+.biography__item-image {
+  width: 5.625rem;
+}
+@media (min-width: 56.25em) {
+  .biography__item-image {
+    width: 7.5rem;
+  }
+}
+
+@media (min-width: 56.25em) {
+  .lectures .container {
+    max-width: 46.25rem;
+  }
+}
+.lectures .tab-container__wrapper {
+  max-width: 100%;
+  height: auto;
+  background-color: #ecf6ff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 1.5rem;
+  overflow-y: hidden;
+  overflow-x: scroll;
+}
+.lectures .tab__button-container {
+  display: flex;
+  white-space: nowrap;
+  background-color: #ecf6ff;
+  border-radius: 1.5rem;
+  overflow-y: auto;
+}
+.lectures .tab__button-container .tab__button {
+  color: #0164fe;
+  background-color: transparent;
+  padding: 0.75rem 1rem;
+  border: none;
+  outline: none;
+}
+.lectures .tab__button-container .tab__button--active {
+  background-color: #0164fe;
+  color: #fff;
+  padding: 0.5rem 1.5rem;
+  border-radius: 1.5rem;
+}
+.lectures .tab__content {
+  margin-top: 2.5rem;
+}
+.lectures .tab__content--sinava-hazirlik .card {
+  padding: 1rem;
+}
+.lectures .tab__content--sinava-hazirlik .card .card__title {
+  margin-top: 0;
+}
+.lectures .tab__content--kocluk {
+  display: block;
+  text-align: center;
+}
+.lectures .tab__content--kocluk .button, .lectures .tab__content--kocluk .button--secondary {
+  margin-top: 1rem;
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */
