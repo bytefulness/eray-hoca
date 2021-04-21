@@ -41,10 +41,6 @@
         font-size: pxToRem(40);
       }
     }
-
-    .highlight {
-      color: $primary-color;
-    }
   }
 
   &__expression {
@@ -251,6 +247,72 @@
 
       .button {
         margin-top: pxToRem(16);
+      }
+    }
+  }
+}
+
+.why-us {
+  @extend %section;
+
+  .container {
+    display: grid;
+
+    .col:nth-of-type(2) {
+      display: none;
+    }
+
+    @include breakpoint-up("for-tablet-landscape-up") {
+      & {
+        grid-template-columns: 45% 45%;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .col:nth-of-type(2) {
+        display: block;
+      }
+    }
+  }
+
+  font-family: Poppins, sans-serif;
+
+  &__list {
+    @include breakpoint-up("for-tablet-landscape-up") {
+      & {
+        width: 80%;
+      }
+    }
+  }
+
+  &__item {
+    @extend .card;
+    text-align: left;
+    padding: pxToRem(24);
+    display: flex;
+    align-items: center;
+
+    &:first-of-type {
+      margin-top: pxToRem(40);
+    }
+
+    margin-top: pxToRem(16);
+
+    .item__image {
+      width: pxToRem(64);
+      margin-right: pxToRem(16);
+    }
+
+    .item__body {
+      .item__title {
+        font-size: pxToRem(16);
+        font-weight: 500;
+      }
+
+      .item__explanation {
+        font-size: pxToRem(14);
+        margin-top: pxToRem(8);
+        line-height: 1.3em;
       }
     }
   }

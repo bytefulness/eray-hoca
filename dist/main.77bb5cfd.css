@@ -6,7 +6,7 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 html {
   line-height: 1.15;
   /* 1 */
@@ -357,6 +357,10 @@ body {
   font-size: 1rem;
 }
 
+p {
+  line-height: 1.7;
+}
+
 img {
   width: 100%;
   height: auto;
@@ -383,6 +387,10 @@ ul {
   display: none !important;
 }
 
+.highlight {
+  color: #0164fe;
+}
+
 .section-title {
   font-family: Poppins, sans-serif;
   font-size: 1.5rem;
@@ -392,6 +400,22 @@ ul {
 }
 @media (min-width: 56.25em) {
   .section-title {
+    font-size: 2rem;
+  }
+}
+
+.section-header {
+  font-family: Poppins, sans-serif;
+  margin-bottom: 3rem;
+}
+.section-header .section__title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  line-height: 1.4em;
+}
+@media (min-width: 56.25em) {
+  .section-header .section__title {
     font-size: 2rem;
   }
 }
@@ -423,7 +447,7 @@ ul {
   box-shadow: 0 0 0 1px #0164fe;
 }
 
-.card {
+.card, .why-us__item {
   font-family: "Poppins", sans-serif;
   text-align: center;
   padding: 2.25rem;
@@ -431,7 +455,7 @@ ul {
   box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
 }
 @media (min-width: 56.25em) {
-  .card {
+  .card, .why-us__item {
     padding: 1.25rem 2.25rem;
   }
 }
@@ -445,7 +469,7 @@ ul {
   margin-top: 1rem;
 }
 
-.lectures, .showcase {
+.why-us, .lectures, .showcase {
   padding: 4rem 1.5rem;
 }
 
@@ -483,9 +507,6 @@ ul {
   .showcase__title {
     font-size: 2.5rem;
   }
-}
-.showcase__title .highlight {
-  color: #0164fe;
 }
 .showcase__expression {
   margin-top: 1.5rem;
@@ -628,10 +649,10 @@ ul {
 .lectures .tab__content {
   margin-top: 2.5rem;
 }
-.lectures .tab__content--sinava-hazirlik .card {
+.lectures .tab__content--sinava-hazirlik .card, .lectures .tab__content--sinava-hazirlik .why-us__item {
   padding: 1rem;
 }
-.lectures .tab__content--sinava-hazirlik .card .card__title {
+.lectures .tab__content--sinava-hazirlik .card .card__title, .lectures .tab__content--sinava-hazirlik .why-us__item .card__title {
   margin-top: 0;
 }
 .lectures .tab__content--kocluk {
@@ -640,6 +661,54 @@ ul {
 }
 .lectures .tab__content--kocluk .button, .lectures .tab__content--kocluk .button--secondary {
   margin-top: 1rem;
+}
+
+.why-us {
+  font-family: Poppins, sans-serif;
+}
+.why-us .container {
+  display: grid;
+}
+.why-us .container .col:nth-of-type(2) {
+  display: none;
+}
+@media (min-width: 56.25em) {
+  .why-us .container {
+    grid-template-columns: 45% 45%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .why-us .container .col:nth-of-type(2) {
+    display: block;
+  }
+}
+@media (min-width: 56.25em) {
+  .why-us__list {
+    width: 80%;
+  }
+}
+.why-us__item {
+  text-align: left;
+  padding: 1.5rem;
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+.why-us__item:first-of-type {
+  margin-top: 2.5rem;
+}
+.why-us__item .item__image {
+  width: 4rem;
+  margin-right: 1rem;
+}
+.why-us__item .item__body .item__title {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.why-us__item .item__body .item__explanation {
+  font-size: 0.875rem;
+  margin-top: 0.5rem;
+  line-height: 1.3em;
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */
