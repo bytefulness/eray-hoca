@@ -191,12 +191,21 @@
 
   .tab__button-container {
     display: flex;
-    white-space: nowrap;
+    // white-space: nowrap;
+    flex-wrap: nowrap;
     background-color: $neutral;
     border-radius: $border-radius;
     overflow-y: auto;
 
+    @include breakpoint-up("for-tablet-landscape-up") {
+      & {
+        max-width: pxToRem(570);
+        margin: 0 auto;
+      }
+    }
+
     .tab__button {
+      flex: 0 0 auto;
       color: $primary-color;
       background-color: transparent;
       padding: pxToRem(12) pxToRem(16);

@@ -383,6 +383,19 @@ ul {
   display: none !important;
 }
 
+.section-title {
+  font-family: Poppins, sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+@media (min-width: 56.25em) {
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
 .button, .button--secondary {
   display: inline-block;
   text-align: center;
@@ -587,12 +600,19 @@ ul {
 }
 .lectures .tab__button-container {
   display: flex;
-  white-space: nowrap;
+  flex-wrap: nowrap;
   background-color: #ecf6ff;
   border-radius: 1.5rem;
   overflow-y: auto;
 }
+@media (min-width: 56.25em) {
+  .lectures .tab__button-container {
+    max-width: 35.625rem;
+    margin: 0 auto;
+  }
+}
 .lectures .tab__button-container .tab__button {
+  flex: 0 0 auto;
   color: #0164fe;
   background-color: transparent;
   padding: 0.75rem 1rem;
