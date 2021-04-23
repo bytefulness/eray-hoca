@@ -2,7 +2,7 @@
   padding: pxToRem(64) pxToRem(24);
 }
 
-%content-modifier {
+%grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: pxToRem(16);
@@ -175,6 +175,12 @@
     }
   }
 
+  .section__header {
+    .section__title {
+      text-align: center;
+    }
+  }
+
   .tab-container__wrapper {
     max-width: 100%;
     height: auto;
@@ -221,15 +227,15 @@
     margin-top: pxToRem(40);
 
     &--lise {
-      @extend %content-modifier;
+      @extend %grid;
     }
 
     &--universite {
-      @extend %content-modifier;
+      @extend %grid;
     }
 
     &--sinava-hazirlik {
-      @extend %content-modifier;
+      @extend %grid;
 
       .card {
         padding: pxToRem(16);
@@ -241,7 +247,7 @@
     }
 
     &--kocluk {
-      @extend %content-modifier;
+      @extend %grid;
       display: block;
       text-align: center;
 
@@ -313,6 +319,57 @@
         font-size: pxToRem(14);
         margin-top: pxToRem(8);
         line-height: 1.3em;
+      }
+    }
+  }
+}
+
+.reviews {
+  @extend %section;
+  background-color: $neutral;
+  padding-right: 0;
+  text-align: center;
+
+  &__wrapper {
+    margin-top: pxToRem(64);
+    max-width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    padding-bottom: pxToRem(24);
+
+    @include breakpoint-up("for-tablet-landscape-up") {
+      & {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        overflow-x: hidden;
+      }
+    }
+
+    .review {
+      flex: 0 0 90%;
+      margin-right: pxToRem(16);
+
+      &__title {
+        text-align: center;
+
+        .review__exam-type {
+          margin-top: pxToRem(16);
+          color: $primary-color;
+        }
+
+        .review__star {
+          display: inline-block;
+          color: $star;
+          font-size: pxToRem(20);
+          margin-top: pxToRem(8);
+        }
+      }
+
+      &__body {
+        .testimonial__review {
+          margin-top: pxToRem(24);
+        }
       }
     }
   }

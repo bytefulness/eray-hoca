@@ -11,21 +11,7 @@
   color: $primary-color;
 }
 
-.section-title {
-  font-family: Poppins, sans-serif;
-  font-size: pxToRem(24);
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: pxToRem(48);
-
-  @include breakpoint-up("for-tablet-landscape-up") {
-    & {
-      font-size: pxToRem(32);
-    }
-  }
-}
-
-.section-header {
+.section__header {
   font-family: Poppins, sans-serif;
   margin-bottom: pxToRem(48);
 
@@ -38,6 +24,26 @@
     @include breakpoint-up("for-tablet-landscape-up") {
       & {
         font-size: pxToRem(32);
+      }
+    }
+
+    &--pill {
+      display: inline-block;
+      background-color: $primary-color;
+      font-family: Poppins, sans-serif;
+      font-weight: 500;
+      font-size: pxToRem(16);
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: #fff;
+      padding: pxToRem(8) pxToRem(36);
+      border-radius: $border-radius;
+      text-align: center;
+
+      &-neutral {
+        @extend .section__title--pill;
+        background-color: $neutral;
+        color: $primary-color;
       }
     }
   }

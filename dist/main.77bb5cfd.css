@@ -391,33 +391,37 @@ ul {
   color: #0164fe;
 }
 
-.section-title {
-  font-family: Poppins, sans-serif;
-  font-size: 1.5rem;
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 3rem;
-}
-@media (min-width: 56.25em) {
-  .section-title {
-    font-size: 2rem;
-  }
-}
-
-.section-header {
+.section__header {
   font-family: Poppins, sans-serif;
   margin-bottom: 3rem;
 }
-.section-header .section__title {
+.section__header .section__title {
   font-size: 1.5rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
   line-height: 1.4em;
 }
 @media (min-width: 56.25em) {
-  .section-header .section__title {
+  .section__header .section__title {
     font-size: 2rem;
   }
+}
+.section__header .section__title--pill, .section__header .section__title--pill-neutral {
+  display: inline-block;
+  background-color: #0164fe;
+  font-family: Poppins, sans-serif;
+  font-weight: 500;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: #fff;
+  padding: 0.5rem 2.25rem;
+  border-radius: 1.5rem;
+  text-align: center;
+}
+.section__header .section__title--pill-neutral {
+  background-color: #ecf6ff;
+  color: #0164fe;
 }
 
 .button, .button--secondary {
@@ -469,7 +473,13 @@ ul {
   margin-top: 1rem;
 }
 
-.why-us, .lectures, .showcase {
+.review {
+  background-color: #fff;
+  padding: 3rem 2.25rem;
+  border-radius: 1.5rem;
+}
+
+.reviews, .why-us, .lectures, .showcase {
   padding: 4rem 1.5rem;
 }
 
@@ -610,6 +620,9 @@ ul {
     max-width: 46.25rem;
   }
 }
+.lectures .section__header .section__title {
+  text-align: center;
+}
 .lectures .tab-container__wrapper {
   max-width: 100%;
   height: auto;
@@ -709,6 +722,47 @@ ul {
   font-size: 0.875rem;
   margin-top: 0.5rem;
   line-height: 1.3em;
+}
+
+.reviews {
+  background-color: #ecf6ff;
+  padding-right: 0;
+  text-align: center;
+}
+.reviews__wrapper {
+  margin-top: 4rem;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+  padding-bottom: 1.5rem;
+}
+@media (min-width: 56.25em) {
+  .reviews__wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    overflow-x: hidden;
+  }
+}
+.reviews__wrapper .review {
+  flex: 0 0 90%;
+  margin-right: 1rem;
+}
+.reviews__wrapper .review__title {
+  text-align: center;
+}
+.reviews__wrapper .review__title .review__exam-type {
+  margin-top: 1rem;
+  color: #0164fe;
+}
+.reviews__wrapper .review__title .review__star {
+  display: inline-block;
+  color: #ffb007;
+  font-size: 1.25rem;
+  margin-top: 0.5rem;
+}
+.reviews__wrapper .review__body .testimonial__review {
+  margin-top: 1.5rem;
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */
