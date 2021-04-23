@@ -1,0 +1,50 @@
+.achievement {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  background-color: #fff;
+  padding: 0 pxToRem(16);
+  height: pxToRem(120);
+  border-radius: $border-radius;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+
+  &__image {
+    width: pxToRem(50);
+    margin-right: pxToRem(8);
+  }
+
+  &__body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .student-name {
+      font-weight: 600;
+    }
+
+    .achievement__order {
+      display: inline-block;
+      margin-top: 3px;
+      margin-left: pxToRem(8);
+      color: $primary-color;
+      font-size: pxToRem(14);
+      font-weight: 600;
+    }
+  }
+
+  &__footer {
+    margin-top: pxToRem(8);
+    text-align: center;
+
+    .university-name {
+      font-weight: 500;
+      line-height: 1.4em;
+    }
+  }
+}
