@@ -353,7 +353,7 @@ html {
 }
 
 body {
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1rem;
 }
 
@@ -478,8 +478,74 @@ ul {
   padding: 3rem 2.25rem;
   border-radius: 1.5rem;
 }
+.review__title {
+  text-align: center;
+}
+.review__title .review__exam-type {
+  font-size: 0.875rem;
+  color: #0164fe;
+  margin-top: 1rem;
+}
+.review__title .review__star {
+  display: inline-block;
+  color: #ffb007;
+  font-size: 1.25rem;
+  margin-top: 0.5rem;
+}
+.review__body .testimonial__review {
+  font-size: 0.875rem;
+  line-height: 1.8em;
+  margin-top: 1.5rem;
+}
 
-.reviews, .why-us, .lectures, .showcase {
+.achievement {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  align-items: center;
+  background-color: #fff;
+  padding: 0 1rem;
+  height: 7.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+}
+.achievement__image {
+  width: 3.125rem;
+}
+@media (min-width: 56.25em) {
+  .achievement__image {
+    justify-self: center;
+  }
+}
+.achievement__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.achievement__header .student-name {
+  order: 1;
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+.achievement__header .achievement__order {
+  display: inline-block;
+  margin-left: 0.5rem;
+  color: #0164fe;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+.achievement__footer {
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  text-align: center;
+}
+.achievement__footer .university-name {
+  font-weight: 500;
+  line-height: 1.4em;
+}
+
+.achievements, .reviews, .why-us, .lectures, .showcase {
   padding: 4rem 1.5rem;
 }
 
@@ -491,6 +557,23 @@ ul {
 @media (min-width: 56.25em) {
   .lectures .tab__content--kocluk, .lectures .tab__content--sinava-hazirlik, .lectures .tab__content--universite, .lectures .tab__content--lise {
     grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+  }
+}
+
+@media (min-width: 37.5em) {
+  .achievements .achievement__items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 1rem;
+  }
+}
+
+@media (min-width: 56.25em) {
+  .achievements .achievement__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
   }
 }
 
@@ -641,7 +724,7 @@ ul {
 }
 @media (min-width: 56.25em) {
   .lectures .tab__button-container {
-    max-width: 35.625rem;
+    max-width: 36.25rem;
     margin: 0 auto;
   }
 }
@@ -748,21 +831,27 @@ ul {
   flex: 0 0 90%;
   margin-right: 1rem;
 }
-.reviews__wrapper .review__title {
+
+.achievements .section__header {
+  max-width: 46.25rem;
+  margin: 0 auto;
   text-align: center;
 }
-.reviews__wrapper .review__title .review__exam-type {
-  margin-top: 1rem;
-  color: #0164fe;
+.achievements .section__header .section__title--pill-neutral {
+  margin-bottom: 1.5rem;
 }
-.reviews__wrapper .review__title .review__star {
-  display: inline-block;
-  color: #ffb007;
-  font-size: 1.25rem;
-  margin-top: 0.5rem;
+.achievements .achievement__items {
+  margin-top: 2.25rem;
 }
-.reviews__wrapper .review__body .testimonial__review {
-  margin-top: 1.5rem;
+@media (min-width: 56.25em) {
+  .achievements .achievement__items {
+    margin-top: 3.75rem;
+  }
+}
+@media (max-width: 37.4375em) {
+  .achievements .achievement__items .achievement {
+    margin-top: 1rem;
+  }
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */

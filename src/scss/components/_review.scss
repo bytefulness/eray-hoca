@@ -2,4 +2,29 @@
   background-color: #fff;
   padding: pxToRem(48) pxToRem(36);
   border-radius: $border-radius;
+
+  &__title {
+    text-align: center;
+
+    .review__exam-type {
+      font-size: pxToRem(14);
+      color: $primary-color;
+      margin-top: pxToRem(16);
+    }
+
+    .review__star {
+      display: inline-block;
+      color: $star;
+      font-size: pxToRem(20);
+      margin-top: pxToRem(8);
+    }
+  }
+
+  &__body {
+    .testimonial__review {
+      font-size: pxToRem(14);
+      line-height: 1.8em;
+      margin-top: pxToRem(24);
+    }
+  }
 }

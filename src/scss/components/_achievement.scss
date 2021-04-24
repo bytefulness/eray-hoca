@@ -1,6 +1,6 @@
 .achievement {
-  display: flex;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: 1fr 4fr;
   align-items: center;
   background-color: #fff;
   padding: 0 pxToRem(16);
@@ -10,27 +10,29 @@
 
   &__image {
     width: pxToRem(50);
-    margin-right: pxToRem(8);
-  }
 
-  &__body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include breakpoint-up("for-tablet-landscape-up") {
+      & {
+        justify-self: center;
+      }
+    }
   }
 
   &__header {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
     .student-name {
+      order: 1;
+      font-size: pxToRem(16);
       font-weight: 600;
+      margin-top: pxToRem(8);
     }
 
     .achievement__order {
       display: inline-block;
-      margin-top: 3px;
       margin-left: pxToRem(8);
       color: $primary-color;
       font-size: pxToRem(14);
@@ -40,6 +42,7 @@
 
   &__footer {
     margin-top: pxToRem(8);
+    font-size: pxToRem(14);
     text-align: center;
 
     .university-name {

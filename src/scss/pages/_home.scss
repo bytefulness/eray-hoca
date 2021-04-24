@@ -2,7 +2,7 @@
   padding: pxToRem(64) pxToRem(24);
 }
 
-%grid {
+%grid-2 {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: pxToRem(16);
@@ -10,6 +10,27 @@
   @include breakpoint-up("for-tablet-landscape-up") {
     & {
       grid-template-columns: repeat(4, 1fr);
+      grid-gap: pxToRem(16);
+    }
+  }
+}
+
+%grid-tablet-2 {
+  @include breakpoint-up("for-tablet-portrait-up") {
+    & {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: pxToRem(16);
+    }
+  }
+}
+
+%grid-desktop-3 {
+  @include breakpoint-up("for-tablet-landscape-up") {
+    & {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: pxToRem(16);
     }
   }
 }
@@ -201,7 +222,7 @@
 
     @include breakpoint-up("for-tablet-landscape-up") {
       & {
-        max-width: pxToRem(570);
+        max-width: pxToRem(580);
         margin: 0 auto;
       }
     }
@@ -227,15 +248,15 @@
     margin-top: pxToRem(40);
 
     &--lise {
-      @extend %grid;
+      @extend %grid-2;
     }
 
     &--universite {
-      @extend %grid;
+      @extend %grid-2;
     }
 
     &--sinava-hazirlik {
-      @extend %grid;
+      @extend %grid-2;
 
       .card {
         padding: pxToRem(16);
@@ -247,7 +268,7 @@
     }
 
     &--kocluk {
-      @extend %grid;
+      @extend %grid-2;
       display: block;
       text-align: center;
 
@@ -349,26 +370,38 @@
     .review {
       flex: 0 0 90%;
       margin-right: pxToRem(16);
+    }
+  }
+}
 
-      &__title {
-        text-align: center;
+.achievements {
+  @extend %section;
 
-        .review__exam-type {
-          margin-top: pxToRem(16);
-          color: $primary-color;
-        }
+  .section__header {
+    max-width: pxToRem(740);
+    margin: 0 auto;
+    text-align: center;
 
-        .review__star {
-          display: inline-block;
-          color: $star;
-          font-size: pxToRem(20);
-          margin-top: pxToRem(8);
-        }
+    .section__title--pill-neutral {
+      margin-bottom: pxToRem(24);
+    }
+  }
+
+  .achievement__items {
+    @extend %grid-tablet-2;
+    @extend %grid-desktop-3;
+    margin-top: pxToRem(36);
+
+    @include breakpoint-up("for-tablet-landscape-up") {
+      & {
+        margin-top: pxToRem(60);
       }
+    }
 
-      &__body {
-        .testimonial__review {
-          margin-top: pxToRem(24);
+    .achievement {
+      @include breakpoint-down("for-phone-only") {
+        & {
+          margin-top: pxToRem(16);
         }
       }
     }
