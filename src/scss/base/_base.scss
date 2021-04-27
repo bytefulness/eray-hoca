@@ -1,6 +1,8 @@
 html {
   font-size: 100%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
 }
 
 *::before,
