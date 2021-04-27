@@ -117,14 +117,78 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"js/script.js":[function(require,module,exports) {
+})({"js/helpers.js":[function(require,module,exports) {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.clearInput = exports.messageFormatter = void 0;
+
+var messageFormatter = function messageFormatter(message) {
+  var formattedMessage = message.replaceAll(" ", "%20");
+  return formattedMessage;
+};
+
+exports.messageFormatter = messageFormatter;
+
+var clearInput = function clearInput(element) {
+  element.value = "";
+};
+
+exports.clearInput = clearInput;
+},{}],"js/script.js":[function(require,module,exports) {
+"use strict";
+
+var _helpers = require("./helpers.js");
+
+// Modules
 // DOM Elements
 var showcaseMessage = document.querySelector(".showcase__message");
-showcaseMessage.addEventListener("focusout", function () {
-  if (showcaseMessage.value) this.style.height = "200px";
-  if (!showcaseMessage.value) this.style.height = "";
-});
-},{}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+var tabButtonContainer = document.querySelector(".tab__button-container");
+var tabButtons = document.querySelectorAll(".tab__button");
+var tabContents = document.querySelector(".tab__content");
+var chatButton = document.querySelector(".chat"); // Functions
+
+var resizeTextArea = function resizeTextArea() {
+  if (showcaseMessage.value) showcaseMessage.style.height = "200px";
+  if (!showcaseMessage.value) showcaseMessage.style.height = "";
+};
+
+var showClickedArea = function showClickedArea(e) {
+  var clicked = e.target.closest(".tab__button");
+  if (!clicked) return; // Remove the active class from on top of buttons
+
+  tabButtons.forEach(function (button) {
+    return button.classList.remove("tab__button--active");
+  });
+  var tabContainers = Array.from(tabContents.children); // Hide all containers for starter
+
+  tabContainers.forEach(function (content) {
+    return content.classList.add("hidden");
+  });
+  clicked.classList.add("tab__button--active");
+  document.querySelector(".tab__content--".concat(clicked.dataset.target)).classList.remove("hidden");
+};
+
+var sendMessage = function sendMessage(e) {
+  e.preventDefault();
+
+  if (showcaseMessage.value) {
+    var message = showcaseMessage.value; // Format the message as Whatsapp message structure to send it proper way.
+
+    var formattedMessage = (0, _helpers.messageFormatter)(message);
+    (0, _helpers.clearInput)(showcaseMessage); // Create new tab
+
+    window.open("https://wa.me/905422990181?text=".concat(formattedMessage), "_blank"); // Enter the url
+  }
+}; // Event Listeners
+
+
+showcaseMessage.addEventListener("focusout", resizeTextArea);
+tabButtonContainer.addEventListener("click", showClickedArea);
+chatButton.addEventListener("click", sendMessage);
+},{"./helpers.js":"js/helpers.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -152,7 +216,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "50829" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54588" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

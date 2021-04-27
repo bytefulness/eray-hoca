@@ -342,6 +342,8 @@ template {
 html {
   font-size: 100%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
 }
 
 *::before,
@@ -424,7 +426,7 @@ ul {
   color: #0164fe;
 }
 
-.button, .button--secondary {
+.button, .button--outline, .button--secondary {
   display: inline-block;
   text-align: center;
   color: #fff;
@@ -438,7 +440,7 @@ ul {
   border: none;
   outline: none;
 }
-.button:hover, .button--secondary:hover {
+.button:hover, .button--outline:hover, .button--secondary:hover {
   background-color: #0558df;
 }
 
@@ -449,6 +451,16 @@ ul {
 .button--secondary:hover {
   background-color: #c3e3ff;
   box-shadow: 0 0 0 1px #0164fe;
+}
+
+.button--outline {
+  color: #0164fe;
+  background-color: #fff;
+  border: 1px solid #0164fe;
+}
+.button--outline:hover {
+  background-color: #0164fe;
+  color: #fff;
 }
 
 .card, .why-us__item {
@@ -545,24 +557,92 @@ ul {
   line-height: 1.4em;
 }
 
-.achievements, .reviews, .why-us, .lectures, .showcase {
-  padding: 4rem 1.5rem;
+.offer {
+  position: relative;
+  padding: 2.25rem 1.5rem;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+@media (min-width: 37.5em) {
+  .offer {
+    height: 340px;
+  }
+}
+.offer__header .offer__title {
+  font-size: 1.5rem;
+}
+.offer__header .offer__explanation {
+  font-size: 0.875rem;
+  line-height: 1.4em;
+  color: #82868f;
+  margin-top: 0.5rem;
+}
+.offer__body {
+  margin-top: 1.5rem;
+}
+@media (min-width: 37.5em) {
+  .offer__body {
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.offer__body .offer__price {
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+.offer__body .offer__price .price--big {
+  font-size: 4rem;
+  letter-spacing: -4px;
+  margin-right: 0.25rem;
+}
+.offer__body .offer__price .price--small {
+  font-size: 1.5rem;
+}
+.offer__body .offer__button {
+  margin-top: 1.5rem;
 }
 
-.lectures .tab__content--kocluk, .lectures .tab__content--sinava-hazirlik, .lectures .tab__content--universite, .lectures .tab__content--lise {
+.offers, .achievements, .reviews, .why-us, .lectures, .showcase {
+  padding: 3rem 1.5rem;
+}
+@media (min-width: 56.25em) {
+  .offers, .achievements, .reviews, .why-us, .lectures, .showcase {
+    padding: 5rem 1.5rem;
+  }
+}
+
+.offers .section__header, .achievements .section__header {
+  max-width: 46.25rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.offers .section__header .section__title--pill-neutral, .achievements .section__header .section__title--pill-neutral {
+  margin-bottom: 1.5rem;
+}
+
+.offers__wrapper {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 1rem;
+}
+
+.lectures .tab__content--sinava-hazirlik, .lectures .tab__content--universite, .lectures .tab__content--lise {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 1rem;
 }
 @media (min-width: 56.25em) {
-  .lectures .tab__content--kocluk, .lectures .tab__content--sinava-hazirlik, .lectures .tab__content--universite, .lectures .tab__content--lise {
+  .lectures .tab__content--sinava-hazirlik, .lectures .tab__content--universite, .lectures .tab__content--lise {
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 1rem;
   }
 }
 
 @media (min-width: 37.5em) {
-  .achievements .achievement__items {
+  .offers__wrapper, .achievements .achievement__items {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-gap: 1rem;
@@ -724,7 +804,7 @@ ul {
 }
 @media (min-width: 56.25em) {
   .lectures .tab__button-container {
-    max-width: 36.25rem;
+    max-width: 30.3125rem;
     margin: 0 auto;
   }
 }
@@ -735,6 +815,13 @@ ul {
   padding: 0.75rem 1rem;
   border: none;
   outline: none;
+  cursor: pointer;
+}
+.lectures .tab__button-container .tab__button:hover:not(.lectures .tab__button-container .tab__button--active) {
+  background-color: #e1f0fc;
+  color: #0164fe;
+  padding: 0.5rem 1rem;
+  border-radius: 1.5rem;
 }
 .lectures .tab__button-container .tab__button--active {
   background-color: #0164fe;
@@ -751,12 +838,21 @@ ul {
 .lectures .tab__content--sinava-hazirlik .card .card__title, .lectures .tab__content--sinava-hazirlik .why-us__item .card__title {
   margin-top: 0;
 }
-.lectures .tab__content--kocluk {
+.lectures .tab__content--egitim-koclugu {
   display: block;
+  background-color: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+  padding: 2.25rem 2.25rem;
   text-align: center;
 }
-.lectures .tab__content--kocluk .button, .lectures .tab__content--kocluk .button--secondary {
-  margin-top: 1rem;
+@media (min-width: 56.25em) {
+  .lectures .tab__content--egitim-koclugu {
+    padding: 2.25rem 3.75rem;
+  }
+}
+.lectures .tab__content--egitim-koclugu .button, .lectures .tab__content--egitim-koclugu .button--secondary, .lectures .tab__content--egitim-koclugu .button--outline {
+  margin-top: 1.5rem;
 }
 
 .why-us {
@@ -806,6 +902,12 @@ ul {
   margin-top: 0.5rem;
   line-height: 1.3em;
 }
+.why-us__image {
+  display: block;
+  width: 80%;
+  border-radius: 1.5rem;
+  margin: 0 auto;
+}
 
 .reviews {
   background-color: #ecf6ff;
@@ -832,14 +934,6 @@ ul {
   margin-right: 1rem;
 }
 
-.achievements .section__header {
-  max-width: 46.25rem;
-  margin: 0 auto;
-  text-align: center;
-}
-.achievements .section__header .section__title--pill-neutral {
-  margin-bottom: 1.5rem;
-}
 .achievements .achievement__items {
   margin-top: 2.25rem;
 }
@@ -848,10 +942,21 @@ ul {
     margin-top: 3.75rem;
   }
 }
+.achievements .achievement__items .achievement {
+  grid-gap: 1rem;
+}
+.achievements .achievement__items .achievement__image {
+  justify-self: center;
+}
 @media (max-width: 37.4375em) {
   .achievements .achievement__items .achievement {
     margin-top: 1rem;
   }
+}
+
+.offers__wrapper {
+  max-width: 46.25rem;
+  margin: 4rem auto 4rem;
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */
