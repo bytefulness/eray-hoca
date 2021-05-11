@@ -5,7 +5,6 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap");
 html {
   line-height: 1.15;
@@ -394,7 +393,6 @@ ul {
 }
 
 .section__header {
-  font-family: Poppins, sans-serif;
   margin-bottom: 3rem;
 }
 .section__header .section__title {
@@ -408,45 +406,44 @@ ul {
     font-size: 2rem;
   }
 }
-.section__header .section__title--pill, .section__header .section__title--pill-neutral {
+.section__header .section__title-pill, .section__header .section__title-pill--neutral {
   display: inline-block;
   background-color: #0164fe;
-  font-family: Poppins, sans-serif;
-  font-weight: 500;
   font-size: 1rem;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
+  font-weight: 500;
   color: #fff;
+  letter-spacing: 0.5px;
+  text-align: center;
+  text-transform: uppercase;
   padding: 0.5rem 2.25rem;
   border-radius: 1.5rem;
-  text-align: center;
 }
-.section__header .section__title--pill-neutral {
+.section__header .section__title-pill--neutral {
   background-color: #ecf6ff;
   color: #0164fe;
 }
 
 .button, .button--outline, .button--secondary {
   display: inline-block;
+  width: 12.5rem;
+  background: #0164fe;
+  font-weight: regular;
   text-align: center;
   color: #fff;
-  font-weight: regular;
-  background: #0164fe;
   padding: 1rem;
-  width: 12.5rem;
   border-radius: 1.5rem;
-  transition: background-color 0.25s ease-in-out, box-shadow 0.2s ease-in-out;
   cursor: pointer;
   border: none;
   outline: none;
+  transition: background-color 0.25s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 .button:hover, .button--outline:hover, .button--secondary:hover {
   background-color: #0558df;
 }
 
 .button--secondary {
-  color: #0164fe;
   background-color: #c3e3ff;
+  color: #0164fe;
 }
 .button--secondary:hover {
   background-color: #c3e3ff;
@@ -454,8 +451,8 @@ ul {
 }
 
 .button--outline {
-  color: #0164fe;
   background-color: #fff;
+  color: #0164fe;
   border: 1px solid #0164fe;
 }
 .button--outline:hover {
@@ -464,7 +461,6 @@ ul {
 }
 
 .card, .why-us__item {
-  font-family: "Poppins", sans-serif;
   text-align: center;
   padding: 2.25rem;
   border-radius: 1.5rem;
@@ -514,9 +510,9 @@ ul {
   display: grid;
   grid-template-columns: 1fr 4fr;
   align-items: center;
+  height: 7.5rem;
   background-color: #fff;
   padding: 0 1rem;
-  height: 7.5rem;
   border-radius: 1.5rem;
   box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
 }
@@ -542,15 +538,15 @@ ul {
 }
 .achievement__header .achievement__order {
   display: inline-block;
-  margin-left: 0.5rem;
-  color: #0164fe;
   font-size: 0.875rem;
   font-weight: 600;
+  color: #0164fe;
+  margin-left: 0.5rem;
 }
 .achievement__footer {
-  margin-top: 0.5rem;
   font-size: 0.875rem;
   text-align: center;
+  margin-top: 0.5rem;
 }
 .achievement__footer .university-name {
   font-weight: 500;
@@ -559,10 +555,10 @@ ul {
 
 .offer {
   position: relative;
+  text-align: center;
   padding: 2.25rem 1.5rem;
   border-radius: 1.5rem;
   box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
-  text-align: center;
 }
 @media (min-width: 37.5em) {
   .offer {
@@ -619,7 +615,7 @@ ul {
   margin: 0 auto;
   text-align: center;
 }
-.offers .section__header .section__title--pill-neutral, .achievements .section__header .section__title--pill-neutral {
+.offers .section__header .section__title-pill--neutral, .achievements .section__header .section__title-pill--neutral {
   margin-bottom: 1.5rem;
 }
 
@@ -661,8 +657,8 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
   background: #ecf6ff;
+  text-align: center;
   border-radius: 1.5rem;
   overflow: hidden;
 }
@@ -692,12 +688,12 @@ ul {
     margin-top: 3rem;
   }
 }
-.showcase__cta .showcase__btn-container {
+.showcase__cta .showcase__btn-wrapper {
   margin-top: 1rem;
   display: flex;
 }
 @media (min-width: 37.5em) {
-  .showcase__cta .showcase__btn-container {
+  .showcase__cta .showcase__btn-wrapper {
     display: block;
   }
 }
@@ -795,7 +791,7 @@ ul {
   overflow-y: hidden;
   overflow-x: scroll;
 }
-.lectures .tab__button-container {
+.lectures .tab__button-wrapper {
   display: flex;
   flex-wrap: nowrap;
   background-color: #ecf6ff;
@@ -803,27 +799,27 @@ ul {
   overflow-y: auto;
 }
 @media (min-width: 56.25em) {
-  .lectures .tab__button-container {
+  .lectures .tab__button-wrapper {
     max-width: 30.3125rem;
     margin: 0 auto;
   }
 }
-.lectures .tab__button-container .tab__button {
+.lectures .tab__button-wrapper .tab__button {
   flex: 0 0 auto;
-  color: #0164fe;
   background-color: transparent;
+  color: #0164fe;
   padding: 0.75rem 1rem;
   border: none;
   outline: none;
   cursor: pointer;
 }
-.lectures .tab__button-container .tab__button:hover:not(.lectures .tab__button-container .tab__button--active) {
+.lectures .tab__button-wrapper .tab__button:hover:not(.lectures .tab__button-wrapper .tab__button--active) {
   background-color: #e1f0fc;
   color: #0164fe;
   padding: 0.5rem 1rem;
   border-radius: 1.5rem;
 }
-.lectures .tab__button-container .tab__button--active {
+.lectures .tab__button-wrapper .tab__button--active {
   background-color: #0164fe;
   color: #fff;
   padding: 0.5rem 1.5rem;
@@ -855,9 +851,6 @@ ul {
   margin-top: 1.5rem;
 }
 
-.why-us {
-  font-family: Poppins, sans-serif;
-}
 .why-us .container {
   display: grid;
 }

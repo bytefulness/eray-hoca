@@ -145,7 +145,7 @@ var _helpers = require("./helpers.js");
 // Modules
 // DOM Elements
 var showcaseMessage = document.querySelector(".showcase__message");
-var tabButtonContainer = document.querySelector(".tab__button-container");
+var tabButtonContainer = document.querySelector(".tab__button-wrapper");
 var tabButtons = document.querySelectorAll(".tab__button");
 var tabContents = document.querySelector(".tab__content");
 var chatButton = document.querySelector(".chat"); // Functions
@@ -216,7 +216,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54588" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49511" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

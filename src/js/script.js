@@ -4,7 +4,7 @@ import { messageFormatter, clearInput } from "./helpers.js";
 // DOM Elements
 const showcaseMessage = document.querySelector(".showcase__message");
 
-const tabButtonContainer = document.querySelector(".tab__button-container");
+const tabButtonContainer = document.querySelector(".tab__button-wrapper");
 const tabButtons = document.querySelectorAll(".tab__button");
 const tabContents = document.querySelector(".tab__content");
 

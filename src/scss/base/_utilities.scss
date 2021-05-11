@@ -12,7 +12,6 @@
 }
 
 .section__header {
-  font-family: Poppins, sans-serif;
   margin-bottom: pxToRem(48);
 
   .section__title {
@@ -27,21 +26,20 @@
       }
     }
 
-    &--pill {
+    &-pill {
       display: inline-block;
       background-color: $primary-color;
-      font-family: Poppins, sans-serif;
-      font-weight: 500;
       font-size: pxToRem(16);
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
+      font-weight: 500;
       color: #fff;
+      letter-spacing: 0.5px;
+      text-align: center;
+      text-transform: uppercase;
       padding: pxToRem(8) pxToRem(36);
       border-radius: $border-radius;
-      text-align: center;
 
-      &-neutral {
-        @extend .section__title--pill;
+      &--neutral {
+        @extend .section__title-pill;
         background-color: $neutral;
         color: $primary-color;
       }
